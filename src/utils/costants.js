@@ -1,0 +1,6 @@
+export const LOGIN_ROUTE = '/login'
+export const REGISTRATION_ROUTE = '/registration'
+export const TRANSACTIONS_ROUTE = '/transactions'
+export const BILL_ROUTE = '/bill'
+export const CARD_ROUTE = '/card'
+export const MAIN_ROUTE = '/main'
