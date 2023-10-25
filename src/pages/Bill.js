@@ -47,7 +47,7 @@ const Bill = observer( () => {
                 </div>
                 <div className='d-flex align-content-center justify-content-between mt-3'>
                     <Form className='d-flex'>
-                        <Form.Control className='' type="number" style={{width:160}} placeholder='Пополнить $'
+                        <Form.Control className='' type="number" min="0" style={{width:160}} placeholder='Пополнить $'
                                       value={fillMoney}
                                       onChange={e=>setFillMoney(e.target.value)}
                         ></Form.Control>

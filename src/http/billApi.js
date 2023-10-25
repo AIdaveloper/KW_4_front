@@ -1,5 +1,6 @@
 import {$authHost, $host} from "./index";
 import jwt_decode from "jwt-decode"
+import bill from "../pages/Bill";
 
 export const getBill = async (billId) =>{
     const {data} = await $authHost.post('api/bill/bill', {billId:billId})
@@ -10,10 +11,15 @@ export const deleteBill = async (billId) =>{
     return data
 }
 export const fillBill = async (billId, money ) =>{
-    if (money = "" || typeof money === 'undefined'){
+    console.log( billId)
+    console.log(typeof money)
+    if (money == "" || typeof money === 'undefined'){
         money = 0
     }
-    const {data} = await $authHost.post('api/bill/fill', {billId:billId, money:money})
+    // if (money == ''){
+    //     money = 0
+    // }
+    const {data} = await $authHost.post('api/bill/fill', {billId:billId, money:Number(money)})
     return data
 }
 export const getBills = async () =>{
